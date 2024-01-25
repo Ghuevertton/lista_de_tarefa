@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* Adicionado para posicionamento absoluto */
+}
+
+li::before {
+    content: '\2022'; /* Caractere unicode do círculo • */
+    color: black; /* Cor do círculo */
+    font-size: 1.5em; /* Tamanho do círculo */
+    margin-right: 8px; /* Ajustado para afastar o texto do círculo */
+    margin-left: -8px; /* Ajustado para aproximar o círculo do texto */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Adiciona estilo quando a tarefa é concluída */
+li.concluida {
+    text-decoration: line-through;
+}
+
+/* Adiciona estilo quando a tarefa é grifada */
+li.grifada {
+    background-color: #d4edda; /* Cor de fundo de destaque */
+    border-radius: 5px;
+    padding: 5px;
+}
